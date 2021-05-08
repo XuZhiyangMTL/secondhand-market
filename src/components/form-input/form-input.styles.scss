@@ -1,7 +1,6 @@
-$sub-color: gray;
+$sub-color: grey;
 $main-color: black;
 
-//reusable piece of css
 @mixin shrinkLabel {
   top: -14px;
   font-size: 12px;
@@ -17,7 +16,7 @@ $main-color: black;
     background-color: white;
     color: $sub-color;
     font-size: 18px;
-    padding: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 5px;
     display: block;
     width: 100%;
     border: none;
@@ -28,13 +27,13 @@ $main-color: black;
     &:focus {
       outline: none;
     }
-    // whenever a user focuses(user select or browser is focused on that input) we add shrinkLabel into .form-input-label
+
     &:focus ~ .form-input-label {
       @include shrinkLabel();
     }
   }
 
-  input[type="password"] {
+  input[type='password'] {
     letter-spacing: 0.3em;
   }
 
@@ -46,7 +45,7 @@ $main-color: black;
     pointer-events: none;
     left: 5px;
     top: 10px;
-    transition: 300ms ease-out;
+    transition: 300ms ease all;
 
     &.shrink {
       @include shrinkLabel();
